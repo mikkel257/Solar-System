@@ -29,13 +29,21 @@ public class Vector {
 	}
 	
 	/**
-	 * Returns the element at position i.
+	 * Returns the element at position i. 0-indexed
 	 * @param positionI The position of the wanted element.
 	 * @return The element at position i.
 	 */
 	public double getElement(int positionI)
 	{
 		return elements[positionI];
+	}
+	
+	/**
+	 * Returns all the elements of the vector.
+	 * @return All the elements of the vector as a double array.
+	 */
+	public double[] getElements(){
+		return elements;
 	}
 	
 	/**
@@ -114,7 +122,7 @@ public class Vector {
 		{
 			for(int i = 0; i < this.length(); i++)
 			{
-				truthValue = equals(e, elements[i], v.getElement(i));
+				truthValue = HelpClass.equals(e, elements[i], v.getElement(i));
 				if(!truthValue)
 				{
 					break;
@@ -126,17 +134,5 @@ public class Vector {
 			truthValue = false;
 		}
 		return truthValue;
-	}
-	
-	/**
-	 * Checks if two doubles are equal with the given precision.
-	 * @param precision The given precision
-	 * @param a One of the doubles to be compared
-	 * @param b One of the doubles to be compared
-	 * @return True if the doubles where equal to each other within the precision.
-	 */
-	private boolean equals(double precision, double a, double b)
-	{
-		return precision > Math.abs(a - b);
 	}
 }
