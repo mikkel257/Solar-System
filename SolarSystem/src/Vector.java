@@ -100,7 +100,7 @@ public class Vector {
 	}
 	
 	/**
-	 * Checks if this vector equals the given vector within the given precision.
+	 * Checks if this vector equals the given vector within the given precision if both vectors have the same dimension.
 	 * @param v The given vector.
 	 * @return True if this vector equals the given vector, false otherwise.
 	 */
@@ -119,6 +119,10 @@ public class Vector {
 					break;
 				}
 			}
+		}
+		else
+		{
+			truthValue = false;
 		}
 		return truthValue;
 	}
