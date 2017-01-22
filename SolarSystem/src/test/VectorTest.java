@@ -1,5 +1,5 @@
 package test;
-import entity.HelpClass;
+
 import entity.Vector;
 import static org.junit.Assert.*;
 
