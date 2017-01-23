@@ -17,5 +17,7 @@ public abstract class HeavenlyBody {
 		this.velocity = velocity;
 		this.color = color;
 	}
+	
+	public abstract void updateInformation(double timeStep);
 
 }
