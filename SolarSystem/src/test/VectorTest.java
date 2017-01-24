@@ -56,8 +56,7 @@ public class VectorTest {
 	@Test
 	public void testAdd() {
 		Vector expected = new Vector(5.2,4.0,5.2);
-		thisVector.add(v);
-		Vector actual = thisVector;
+		Vector actual = thisVector.add(v);
 		assertTrue(expected.equals(actual));
 	}
 
@@ -67,14 +66,20 @@ public class VectorTest {
 	@Test
 	public void testSubtract() {
 		Vector expected = new Vector(-2.2, 0.0, 2.2);
-		thisVector.subtract(v);
-		Vector actual = thisVector;
+		Vector actual = thisVector.subtract(v);
 		assertTrue(expected.equals(actual));
 	}
 
 	@Test
 	public void testEqualsVector() {
 		assertTrue(thisVector.equals(thisVector));
+	}
+	
+	@Test
+	public void testScale() {
+		Vector expected = new Vector(15.0, 20.0, 37.0);
+		Vector actual = thisVector.scale(10);
+		assertTrue(expected.equals(actual));
 	}
 
 	
