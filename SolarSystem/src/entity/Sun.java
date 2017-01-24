@@ -9,8 +9,13 @@ public class Sun extends HeavenlyBody {
 		super(name, position, velocity, color);
 	}
 	
-	public void updateInformation(double timeStep)
+	public void updateMotion(double timeStep)
 	{
-		
+		updatePosition(timeStep);
+	}
+	
+	private void updatePosition(double timeStep)
+	{
+		this.position = this.position.add((this.velocity.scale(timeStep)));
 	}
 }
