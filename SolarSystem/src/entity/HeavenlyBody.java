@@ -18,6 +18,6 @@ public abstract class HeavenlyBody {
 		this.color = color;
 	}
 	
-	public abstract void updateInformation(double timeStep);
+	public abstract void updateMotion(double timeStep);
 
 }
