@@ -16,6 +16,6 @@ public class Sun extends HeavenlyBody {
 	
 	private void updatePosition(double timeStep)
 	{
-		this.position = this.position.add((this.velocity.scale(timeStep)));
+		this.position = this.position.add(this.velocity.scale(timeStep));
 	}
 }
