@@ -74,38 +74,57 @@ public class Vector {
 	 * Adds the given vector to this vector if they have the same dimension.
 	 * @param v The given vector.
 	 */
-	public void add(Vector v)
+	public Vector add(Vector v)
 	{
+		double[] newVector = new double[this.length()];
 		if (this.length() == v.length())
 		{
 			for(int i = 0; i < this.length(); i++)
 			{
-				elements[i] = elements[i] + v.getElement(i);
+				newVector[i] = elements[i] + v.getElement(i);
 			}
 		}
 		else
 		{
 			System.out.println("The dimension of the vectors does not match!");
 		}
+		return new Vector(newVector);
 	}
 	
 	/**
 	 * Subtracts the given vector from this vector if they have the same dimension.
 	 * @param v The given vector.
 	 */
-	public void subtract(Vector v)
+	public Vector subtract(Vector v)
 	{
+		double[] newVector = new double[this.length()];
 		if (this.length() == v.length())
 		{
 			for(int i = 0; i < this.length(); i++)
 			{
-				elements[i] = elements[i] - v.getElement(i);
+				newVector[i] = elements[i] - v.getElement(i);
 			}
 		}
 		else
 		{
 			System.out.println("The dimension of the vectors does not match!");
 		}
+		return new Vector(newVector);
+	}
+	
+	/**
+	 * Scales this vector with the given scalar.
+	 * @param scalar The given scalar.
+	 * @return The scaled vector.
+	 */
+	public Vector scale(double scalar)
+	{
+		double[] newVector = new double[this.length()];
+		for(int i = 0; i < this.length(); i++)
+		{
+			newVector[i] = scalar * elements[i];
+		}
+		return new Vector(newVector);
 	}
 	
 	/**
