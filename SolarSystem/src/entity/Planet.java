@@ -13,14 +13,14 @@ public class Planet extends HeavenlyBody {
 	}
 	
 	@Override
-	public void updateMotion(double timeStep)
+	public void updateMotion(double timeStep, Vector sunPosition)
 	{
-		updateAcceleration(timeStep);
+		updateAcceleration(timeStep, sunPosition);
 		updatePosition(timeStep);
 		updateVelocity(timeStep);
 	}
 	
-	private void updateAcceleration(double timeStep)
+	private void updateAcceleration(double timeStep, Vector sunPosition)
 	{
 		
 	}

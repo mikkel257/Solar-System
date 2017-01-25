@@ -10,7 +10,7 @@ public class Sun extends HeavenlyBody {
 	}
 	
 	@Override
-	public void updateMotion(double timeStep)
+	public void updateMotion(double timeStep, Vector sunPosition)
 	{
 		updatePosition(timeStep);
 	}
