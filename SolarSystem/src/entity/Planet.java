@@ -12,6 +12,7 @@ public class Planet extends HeavenlyBody {
 		super(name, position, velocity, color);
 	}
 	
+	@Override
 	public void updateMotion(double timeStep)
 	{
 		updateAcceleration(timeStep);
